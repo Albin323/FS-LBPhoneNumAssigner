@@ -1,0 +1,7 @@
+{
+    "name_must_start_with_number": "Ditt namn måste starta med ett nummer.",
+    "failed_to_fetch_license": "Fick inte tag i din license. Var god och rejoina servern.",
+    "failed_to_register_phone_number": "Kunde inte registrera ditt telfeonnummer. Var god kontakta support.",
+    "error_no_license": "[ERROR] Ingen license funnen för source: {src}",
+    "error_database": "[ERROR] Databas fel: {error}"
+}
