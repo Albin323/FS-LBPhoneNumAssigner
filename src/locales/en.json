@@ -1,0 +1,7 @@
+{
+    "name_must_start_with_number": "Your name must start with a number.",
+    "failed_to_fetch_license": "Failed to fetch your license. Please rejoin.",
+    "failed_to_register_phone_number": "Failed to register your phone number. Please contact support.",
+    "error_no_license": "[ERROR] No license found for source: {src}",
+    "error_database": "[ERROR] Database error: {error}"
+}

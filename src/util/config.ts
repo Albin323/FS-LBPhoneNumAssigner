@@ -3,7 +3,8 @@ const config = JSON.parse(LoadResourceFile(GetCurrentResourceName(), "config.jso
 
 // This is optional, but it's helpful to provide type completion for your config options.
 export interface Config {
-	lbphoneNumberFormat: string,
+	language: string,
+	lbphoneNumberFormat: string
 }
 
 // Export so it can be accessed from any other file.

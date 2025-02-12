@@ -16,6 +16,10 @@ export default defineConfig({
 		{
 			from: 'src/config.json',
 			to: 'config.json'
+		},
+		{
+			from: 'src/locales/**/*.json',
+			to: 'locales'
 		}
 		/*
         {

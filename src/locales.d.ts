@@ -1,0 +1,1 @@
+export type LocaleKeys = keyof typeof import('./locales/en.json');

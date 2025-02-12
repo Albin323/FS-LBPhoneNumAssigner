@@ -1,5 +1,6 @@
 import { config } from '@/util/config'
 import { oxmysql } from '@overextended/oxmysql';
+import { locale } from 'locales';
 
 on('playerConnecting', async (name: string, _setKickReason: any, deferrals: any) => {
     deferrals.defer()
@@ -8,7 +9,7 @@ on('playerConnecting', async (name: string, _setKickReason: any, deferrals: any)
 
     const numberMatch = name.match(/^\d+/);
     if (!numberMatch) {
-        deferrals.done("Your name must start with a number.");
+        deferrals.done(locale('name_must_start_with_number'));
         return;
     }
 
@@ -17,8 +18,8 @@ on('playerConnecting', async (name: string, _setKickReason: any, deferrals: any)
     const license = GetPlayerIdentifierByType(src.toString(), 'license');
 
     if (!license) {
-        console.error(`^1[ERROR]^0 No license found for source: ${src}`);
-        deferrals.done("Failed to fetch your license. Please rejoin.");
+        console.error(locale('error_no_license').replace('{src}', src.toString()));
+        deferrals.done(locale('failed_to_fetch_license'));
         return;
     }
 
@@ -31,8 +32,8 @@ on('playerConnecting', async (name: string, _setKickReason: any, deferrals: any)
         ]);
         deferrals.done();
     } catch (error) {
-        console.error(`^1[ERROR]^0 Database error: ${error.message}`);
-        deferrals.done("Failed to register your phone number. Please contact support.");
+        console.error(locale('error_database').replace('{error}', error.message));
+        deferrals.done(locale('failed_to_register_phone_number'));
     }
 })
 

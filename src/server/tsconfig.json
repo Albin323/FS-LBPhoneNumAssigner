@@ -16,5 +16,5 @@
             ]
         }
     },
-    "include": ["./", "../common"]
+    "include": ["./", "../common", "../locales.d.ts"]
 }
